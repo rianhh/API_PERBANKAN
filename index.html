@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banking App</h1>
+
+        <!-- Form untuk Transfer -->
+        <h2>Transfer Uang</h2>
+        <form action="transfer.php" method="post">
+            <div class="form-group">
+                <label for="from">Akun Pengirim:</label>
+                <input type="text" id="from" name="from" required>
+            </div>
+
+            <div class="form-group">
+                <label for="to">Akun Penerima:</label>
+                <input type="text" id="to" name="to" required>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Jumlah Transfer:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+
+            <button type="submit">Transfer Uang</button>
+        </form>
+
+        <!-- Form untuk Cek Saldo -->
+        <h2>Cek Saldo</h2>
+        <form action="check_balance.php" method="get">
+            <div class="form-group">
+                <label for="balance_account">Akun:</label>
+                <input type="text" id="balance_account" name="account_number" required>
+            </div>
+
+            <button type="submit">Cek Saldo</button>
+        </form>
+
+        <!-- Form untuk Lihat Transaksi Terakhir -->
+        <h2>Transaksi Terakhir</h2>
+        <form action="view_transactions.php" method="get">
+            <div class="form-group">
+                <label for="transactions_account">Akun:</label>
+                <input type="text" id="transactions_account" name="account_number" required>
+            </div>
+
+            <button type="submit">Lihat Transaksi Terakhir</button>
+        </form>
+    </div>
+</body>
+</html>
